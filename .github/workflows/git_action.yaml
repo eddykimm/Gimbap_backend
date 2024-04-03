@@ -30,5 +30,5 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner }}/gimbap_backend:latest .
-          docker push ghcr.io/${{ github.repository_owner }}/gimbap_backend:latest
+          docker build -t ghcr.io/${{ github.repository_owner }}/gimbap/gimbap_backend:latest .
+          docker push ghcr.io/${{ github.repository_owner }}/gimbap/gimbap_backend:latest
