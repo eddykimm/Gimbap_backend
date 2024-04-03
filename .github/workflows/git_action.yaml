@@ -16,17 +16,17 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Print GitHub actor
-        run: echo "GitHub actor is ${{ github.actor }}"
+        run: echo "GitHub GB_NAME is ${{ secrets.GB_NAME }}"
 
       - name: Print GitHub token
-        run: echo "GitHub token is ${{ secrets.GB_TK }}"
+        run: echo "GitHub GB_TOKEN is ${{ secrets.GB_TOKEN }}"
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
           username: ${{ secrets.GB_NAME }}
-          password: ${{ secrets.GB_TK }}
+          password: ${{ secrets.GB_TOKEN }}
 
       - name: Build and push Docker image
         run: |
