@@ -3,6 +3,8 @@ FROM python:3.11-alpine3.19
 # 필요한 패키지 설치
 RUN pip install django
 
+RUN apk add --no-cache mariadb-dev
+
 # 작업 디렉토리 설정
 WORKDIR /Gimbap_backend
 
