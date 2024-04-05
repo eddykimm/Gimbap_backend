@@ -7,10 +7,12 @@ RUN pip install django
 WORKDIR /Gimbap_backend
 
 # 소스 코드 복사
-COPY . /Gimbap_backend
+COPY ../requirements.txt .
 
 # 의존성 설치
 RUN pip install -r requirements.txt
+
+COPY . /Gimbap_backend
 
 # CMD 명령 실행
 CMD ["python", "Gimbap_backend/manage.py", "runserver", "0.0.0.0:8080"]
