@@ -9,7 +9,7 @@ from .models import *
 # Create your views here.
 def index(request):
     boards = {'boards': Board.objects.all()}
-    print(f"boards",boards)
+
     if boards is not None:
         return render(request, 'list.html', boards)
     else:

@@ -89,7 +89,7 @@ DATABASES = {
         'NAME': 'gimbap_db',
         'USER': 'gimbap_user',
         'PASSWORD': 'zaq12wsx', # mariaDB 설치 시 입력한 root 비밀번호 입력
-        'HOST': 'localhost',
+        'HOST': 'database',
         'PORT': '3306'
     }
 }
