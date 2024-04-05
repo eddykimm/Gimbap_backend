@@ -4,6 +4,7 @@ FROM python:3.11-alpine3.19
 RUN pip install django
 
 RUN apk add --no-cache mariadb-dev
+RUN apk add --no-cache build-base mariadb-dev
 
 # 작업 디렉토리 설정
 WORKDIR /Gimbap_backend
