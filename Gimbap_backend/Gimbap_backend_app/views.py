@@ -8,9 +8,13 @@ from .models import *
 
 # Create your views here.
 def index(request):
-    boards = {'boards':Board.objects.all()}
-    return render(request, 'list.html', boards)
-
+    boards = {'boards': Board.objects.all()}
+    print(f"boards",boards)
+    if boards is not None:
+        return render(request, 'list.html', boards)
+    else:
+        return render(request, 'list.html')
+    # return render(request, 'list.html')
 
 def post(request):
     if request.method == 'POST':
