@@ -85,11 +85,12 @@ WSGI_APPLICATION = 'Gimbap_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', # mysqlclient librarly 설치
-        'NAME': 'gimbapdb',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'gimbap_db',
         'USER': 'gimbap_user',
-        'PASSWORD': 'zaq12wsx', # mariaDB 설치 시 입력한 root 비밀번호 입력
-        'HOST': 'database',
+        'PASSWORD': 'zaq12wsx',
+        'HOST': 'host.docker.internal',
+        # 'HOST': '127.0.0.1',
         'PORT': '3306'
     }
 }
